@@ -1,0 +1,26 @@
+.search-menu {
+    width: 320px;
+    height: 400px;
+    background-color: rgb(244, 249, 253);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.top-headlines-news {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 180%;
+    color: #444444;
+}
+
+.choice-country {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #949494;
+}

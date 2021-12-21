@@ -1,0 +1,34 @@
+
+.latest-news-card {
+    width: 270px;
+    height: 294px;
+}
+
+.latest-news-card-title {
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #121221;    
+}
+
+.from-information-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.latest-time,
+.latest-sourse {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #949494;
+}
+
+.latest-sourse {
+    margin-left: 16px;
+}

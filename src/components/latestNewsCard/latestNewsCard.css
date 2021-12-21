@@ -1,0 +1,41 @@
+.latest-news-card {
+  width: 270px;
+  height: 294px;
+}
+
+.latest-news-card-title {
+  margin-top: 16px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #121221;
+}
+
+.from-information-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 24px;
+}
+
+.latest-time,
+.latest-sourse {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #949494;
+}
+
+.latest-sourse {
+  margin-left: 16px;
+}
+/*# sourceMappingURL=latestNewsCard.css.map */

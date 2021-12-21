@@ -1,0 +1,35 @@
+.search-menu {
+  width: 320px;
+  height: 400px;
+  background-color: #f4f9fd;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.top-headlines-news {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 180%;
+  color: #444444;
+}
+
+.choice-country {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #949494;
+}
+/*# sourceMappingURL=searchMenu.css.map */
