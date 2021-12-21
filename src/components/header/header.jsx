@@ -7,7 +7,7 @@ export default function Header(props) {
 
     const dispatch = useDispatch();
 
-    const fetchParams = {
+    let fetchParams = {
         Country: props.Country,
         Category: props.Category,
     }
@@ -37,7 +37,7 @@ export default function Header(props) {
                     </button>
                 </div>
                 <div className="menu">
-                    <button onClick={(fetchParams)=> dispatch({type: 'MENU', fetchParams })} className="open-menu">
+                    <button onClick={()=> dispatch({type: 'MENU', fetchParams })} className="open-menu">
                         <p className="menu-icon"></p>
                         <p className="menu-icon"></p>
                         <p className="menu-icon"></p>
