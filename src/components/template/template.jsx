@@ -4,15 +4,23 @@ import Header from "../header/header";
 import HotNewsCard from "../hotNews/hotNews";
 import LatestNewsCard from "../latestNewsCard/latestNewsCard";
 import SearchMenu from "../header/searchMenu";
+import { useSelector, useDispatch } from 'react-redux';
 
 export default function Template() {
+
+    const {searchNewsReducer} = useSelector((state) => state);
+    const isMenu = searchNewsReducer.menu;
+
+    console.log(searchNewsReducer.Country, searchNewsReducer.Category, searchNewsReducer.CountryPresentation);
 
     return(
         <div className="template">
             <div className="template-wrapper">
-                <Header />
+                <Header CountryPresentation={searchNewsReducer.CountryPresentation}
+                        Category={searchNewsReducer.Category}
+                        Country={searchNewsReducer.Country} />
                 <div className="search-menu-block">
-                    <SearchMenu />
+                    {isMenu === true ? <SearchMenu /> : null }
                 </div>
                 <div className="hot-news-block">
                     <p className="hot-news-title">

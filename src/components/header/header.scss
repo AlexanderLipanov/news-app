@@ -49,6 +49,17 @@
     line-height: 21px;
 }
 
+.search-params {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    color: #121221bb;
+    background: #8cc3dd85;
+    margin-right: 15px;
+}
+
 .search-and-menu {
     display: flex;
     flex-direction: row;

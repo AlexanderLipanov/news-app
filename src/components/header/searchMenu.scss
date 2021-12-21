@@ -1,26 +1,62 @@
 .search-menu {
     width: 320px;
-    height: 400px;
+    min-height: 400px;
+    padding: 15px 0 15px 0;
     background-color: rgb(244, 249, 253);
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    row-gap: 25px;
+    border-radius: 4px;
 }
 
-.top-headlines-news {
+.top-headlines-news-container,
+.category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-headlines-news,
+.category-news {
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
-    line-height: 180%;
+    font-size: 26px;
     color: #444444;
 }
 
-.choice-country {
+.advice {
+    margin-top: 7px;
+    line-height: 7px;
+}
+
+.choice-param {
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 14px;
     color: #949494;
+    background: none;
+    margin-top: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.choice-param-selected {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 14px;
+    color: #444444;
+    background: none;
+    margin-top: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: #0bdceb;
+    cursor: default;
+}
+
+.choice-param:hover {
+    background: #28effd;
 }
