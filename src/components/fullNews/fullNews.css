@@ -1,20 +1,22 @@
-.hot-news {
+.full-hot-news {
   width: 100%;
-  height: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 24px;
 }
 
-.view-hot-news-photo-block {
+.full-view-hot-news-photo-block {
   width: 870px;
   height: 400px;
   border-radius: 8px;
@@ -22,29 +24,29 @@
   background: #444444;
 }
 
-.view-hot-news-photo {
+.full-view-hot-news-photo {
   width: 100%;
   height: 100%;
 }
 
-.description-block {
+.full-description-block {
   max-width: 543px;
   margin-left: 32px;
-  margin-top: -200px;
+  margin-top: -50px;
 }
 
-.description {
-  max-width: 100%;
+.full-description {
+  max-width: 870px;
   height: 144px;
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
   line-height: 120%;
-  color: #ffffff;
+  color: #363434;
   overflow: hidden;
 }
 
-.source-and-time {
+.full-source-and-time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,7 +60,7 @@
   margin-top: 19px;
 }
 
-.time {
+.full-time {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -66,7 +68,7 @@
   color: #F8F8F8;
 }
 
-.source {
+.full-source {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -75,8 +77,8 @@
   margin-left: 27px;
 }
 
-.article {
-  width: 270px;
+.full-article {
+  width: 870px;
   max-height: 400px;
   margin-left: 30px;
   overflow: hidden;
@@ -87,11 +89,24 @@
   color: #444444;
 }
 
-.indention {
+.full-indention {
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 64px;
   color: #444444;
 }
-/*# sourceMappingURL=hotNews.css.map */
+
+.back {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 64px;
+  color: #1a1818;
+  margin-top: 20px;
+}
+
+.back:hover {
+  color: #2e5e8b93;
+}
+/*# sourceMappingURL=fullNews.css.map */

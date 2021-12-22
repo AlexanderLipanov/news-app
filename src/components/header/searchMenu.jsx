@@ -2,7 +2,7 @@ import React from "react";
 import './searchMenu.css';
 import { useDispatch, useSelector } from "react-redux";
 
-const SearchMenu = () => {
+export default function SearchMenu() {
 
     const dispatch = useDispatch();
     const {searchNewsReducer} = useSelector((state) => state);
@@ -80,5 +80,3 @@ const SearchMenu = () => {
         </div>
     );
 }
-
-export default SearchMenu;

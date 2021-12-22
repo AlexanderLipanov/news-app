@@ -60,12 +60,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 64px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
 }
 
 .latest-news-block-card-container::-webkit-scrollbar {

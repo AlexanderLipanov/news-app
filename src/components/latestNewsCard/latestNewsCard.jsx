@@ -1,21 +1,40 @@
 import React from "react";
-import LatestNesCardPhoto from '../../img/Rectangle3.png';
+import { useDispatch } from "react-redux";
 import './latestNewsCard.css';
+import { Link } from "react-router-dom";
 
-const LatestNewsCard = () => {
+const LatestNewsCard = (props) => {
+
+    const previewTitle = props.item.title.slice(0,30);
+    const perviewDate = props.item.publishedAt.slice(0,10);
+    console.log(previewTitle.length);
+
+    const dispatch = useDispatch();
+
+    const fullNewsParams = {
+        image: props.item.urlToImage,
+        title: props.item.title,
+        date: perviewDate,
+        author: props.item.author,
+        article: props.item.description,
+    }
 
     return(
         <div className="latest-news-card">
-            <img src={LatestNesCardPhoto} alt="" className="latest-news-card-photo" />
+            <Link onClick={() => dispatch({ type: 'FULL_NEWS', fullNewsParams})} to='/fullNews' >
+                <img src={props.item.urlToImage} alt="" className="latest-news-card-photo" />
+            </Link>
             <p className="latest-news-card-title">
-            News Title Lorem Ipsum Dolor Sit Amet
+                {props.item.title.length > 30 
+                ? (previewTitle + '...')
+                : previewTitle }
             </p>
             <div className="from-information-container">
                 <p className="latest-time">
-                1 Hour Ago
+                    {perviewDate}
                 </p>
                 <p className="latest-sourse">
-                CNN Indonesia
+                    {props.item.author}
                 </p>
             </div>
         </div>

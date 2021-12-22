@@ -1,18 +1,23 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './header.css'
 import Search from '../../svg/Search.svg'
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-export default function Header(props) {
+export default function Header() {
 
+    const {searchNewsReducer} = useSelector((state) => state);
     const dispatch = useDispatch();
 
     let fetchParams = {
-        Country: props.Country,
-        Category: props.Category,
-    }
+        Country: searchNewsReducer.Country,
+        Category: searchNewsReducer.Category,
+    };
 
-    console.log(fetchParams);
+    console.log(fetchParams, searchNewsReducer);
+
+    useEffect(() => {
+        dispatch({type: 'FETCH_NEWS', params: fetchParams})
+    }, []);
 
     return(
         <div className="header">
@@ -29,15 +34,15 @@ export default function Header(props) {
                 </div>
             </div>
             <div className="search-and-menu">
-                {props.CountryPresentation === '' ? null : <p className="search-params"> {props.CountryPresentation} </p>}
-                {props.Category === '' ? null : <p className="search-params"> {props.Category} </p>}
+                {searchNewsReducer.CountryPresentation === '' ? null : <p className="search-params"> {searchNewsReducer.CountryPresentation} </p>}
+                {searchNewsReducer.Category === '' ? null : <p className="search-params"> {searchNewsReducer.Category} </p>}
                 <div className="search">
-                    <button onClick={()=> dispatch({type: 'FETCH_NEWS'})} className="open-search">
+                    <button onClick={()=> dispatch({type: 'FETCH_NEWS', params: fetchParams})} className="open-search">
                         <img src={Search} alt="" className="search-icon" />
                     </button>
                 </div>
                 <div className="menu">
-                    <button onClick={()=> dispatch({type: 'MENU', fetchParams })} className="open-menu">
+                    <button onClick={()=> dispatch({type: 'MENU'})} className="open-menu">
                         <p className="menu-icon"></p>
                         <p className="menu-icon"></p>
                         <p className="menu-icon"></p>

@@ -7,19 +7,17 @@ export const baseURL = 'https://newsapi.org/v2/top-headlines?';
 
 //&apiKey=4b132a1d5e5e47a08aa1bc6a7e41328a
 async function GetNews(fetchParams) {
-    const request = await fetch(`${baseURL}country=${fetchParams.Country}&category=${fetchParams.Category}&apiKey=4b132a1d5e5e47a08aa1bc6a7e41328a`);
+    const request = await fetch(`${baseURL}country=${fetchParams.params.Country}&category=${fetchParams.params.Category}&apiKey=4b132a1d5e5e47a08aa1bc6a7e41328a`);
     const data = await request.json();
     console.log(data, 'data');
     return data;
 }
 
 function* fetchNews(fetchParams) {
-    try {
         const News = yield GetNews(fetchParams);
-        yield put({type: 'SET_NEWS_PAYLOAD', payload: News});
-    } catch (error) {
-        yield put({type: 'FETCH_FAILED', error});
-    }
+        const articles = News.articles;
+        yield put({type: 'SET_NEWS', articles: articles});
+        console.log(fetchParams);
 }
 
 function* newsWatcher() {

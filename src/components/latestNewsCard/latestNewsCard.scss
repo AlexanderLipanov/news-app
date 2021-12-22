@@ -4,13 +4,21 @@
     height: 294px;
 }
 
+.latest-news-card-photo {
+    width: 270px;
+    height: 176px;
+    border-radius: 4px;
+    background-color: #121221;
+}
+
 .latest-news-card-title {
     margin-top: 16px;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
-    color: #121221;    
+    color: #121221;  
+    height: 64px;  
 }
 
 .from-information-container {
