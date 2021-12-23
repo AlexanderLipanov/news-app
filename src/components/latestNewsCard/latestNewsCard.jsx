@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import './latestNewsCard.css';
 import { Link } from "react-router-dom";
 
-const LatestNewsCard = (props) => {
+export default function LatestNewsCard(props) {
 
     const previewTitle = props.item.title.slice(0,30);
     const perviewDate = props.item.publishedAt.slice(0,10);
@@ -41,4 +41,3 @@ const LatestNewsCard = (props) => {
     );
 }
 
-export default LatestNewsCard;

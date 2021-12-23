@@ -63,3 +63,38 @@
     flex-direction: row;
     justify-content: flex-end;
 }
+
+@media (max-width: 1440px) {
+
+    .template {
+        width: 100%;
+    }
+
+    .template-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 630px) {
+
+    .latest-news-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .latest-news-block-card-scroll-container {
+        flex-direction: row;
+        justify-content: center;
+        row-gap: 64px;
+        column-gap: 5%;
+    }
+}
+
+@media (max-width: 385px) {
+    .hot-news-title,
+    .latest-news-title {
+        font-size: 30px;
+        line-height: 30px;
+    }
+}

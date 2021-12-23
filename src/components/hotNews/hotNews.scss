@@ -1,6 +1,6 @@
 .hot-news {
     width: 100%;
-    height: 480px;
+    height: calc( width * 0.6 );
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -9,7 +9,7 @@
 
 .view-hot-news-photo-block {
     width: 870px;
-    height: 400px;
+    height: calc( width * 0.6 );
     border-radius: 8px;
     overflow: hidden;    
     background: #444444;
@@ -27,7 +27,7 @@
 }
 
 .description {
-    max-width: 100%;
+    width: 100%;
     height: 144px;
     font-style: normal;
     font-weight: bold;
@@ -80,4 +80,105 @@
     line-height: 64px;
     color: #444444; 
 }
+
+@media (max-width: 1440px) {
+
+
+    .description {
+        font-size: 29px;
+        line-height: 110%;
+        width: 90%;
+    }
+}
+
+@media (max-width: 862px) {
+
+    .article {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .indention {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .description-block {
+        margin-top: -150px;
+    }
+
+    .description {
+        font-size: 25px;
+        line-height: 100%;
+        width: 90%;
+        height: 80%;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .description-block {
+        margin-top: -100px;
+    }
+
+    .description {
+        font-size: 18px;
+        line-height: 90%;
+        width: 98%;
+        height: 80%;
+    }
+
+    .article {
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: 15px;
+    }
+
+    .indention {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .source-and-time {
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .description-block {
+        margin-top: -75px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .article {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    .indention {
+        font-size: 20px;
+        line-height: 40px; 
+    }
+}
+
+@media (max-width: 385px) {
+    .hot-news {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .view-hot-news-photo-block {
+        width: 100%;
+    }
+
+    .article {
+        width: 100%;
+    }
+} 
+
 

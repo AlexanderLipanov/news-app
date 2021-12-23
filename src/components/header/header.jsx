@@ -15,9 +15,29 @@ export default function Header() {
 
     console.log(fetchParams, searchNewsReducer);
 
+    const setLocalStorage = () => {
+        localStorage.setItem('country', searchNewsReducer.Country);
+        localStorage.setItem('category', searchNewsReducer.Category);
+    }
+
+    const removeLocalStorage = () => {
+        localStorage.removeItem('country');
+        localStorage.removeItem('category');
+    }
+
     useEffect(() => {
-        dispatch({type: 'FETCH_NEWS', params: fetchParams})
-    }, []);
+        removeLocalStorage();
+        dispatch({type: 'FETCH_NEWS', params: fetchParams});
+        setLocalStorage();
+    }, [searchNewsReducer.Country && searchNewsReducer.Category]);
+
+    let localParams = {
+        Country: localStorage.getItem('country'),
+        Category: localStorage.getItem('category'),
+    }
+
+    console.log( localStorage.getItem('country'),
+     localStorage.getItem('category'), localParams);
 
     return(
         <div className="header">
@@ -37,7 +57,11 @@ export default function Header() {
                 {searchNewsReducer.CountryPresentation === '' ? null : <p className="search-params"> {searchNewsReducer.CountryPresentation} </p>}
                 {searchNewsReducer.Category === '' ? null : <p className="search-params"> {searchNewsReducer.Category} </p>}
                 <div className="search">
-                    <button onClick={()=> dispatch({type: 'FETCH_NEWS', params: fetchParams})} className="open-search">
+                    <button onClick={()=> {
+                        removeLocalStorage();
+                        dispatch({type: 'FETCH_NEWS', params: fetchParams});
+                        setLocalStorage();
+                        }} className="open-search">
                         <img src={Search} alt="" className="search-icon" />
                     </button>
                 </div>

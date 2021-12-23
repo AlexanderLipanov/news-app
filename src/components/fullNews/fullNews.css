@@ -18,7 +18,7 @@
 
 .full-view-hot-news-photo-block {
   width: 870px;
-  height: 400px;
+  height: calc( width * 0.6);
   border-radius: 8px;
   overflow: hidden;
   background: #444444;
@@ -109,5 +109,24 @@
 
 .back:hover {
   color: #2e5e8b93;
+}
+
+@media (max-width: 888px) {
+  .full-view-hot-news-photo-block {
+    width: 95%;
+  }
+  .full-description-block {
+    width: 100%;
+    height: auto;
+  }
+  .full-description {
+    width: 95%;
+    height: auto;
+  }
+  .full-article {
+    width: 95%;
+    margin-left: 0;
+    margin-top: 40px;
+  }
 }
 /*# sourceMappingURL=fullNews.css.map */

@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import './hotNews.css';
@@ -8,7 +8,6 @@ export default function HotNewsCard(props) {
     console.log(props.item, 'ITEM');
 
     const dispatch = useDispatch();
-    const callback = useCallback();
 
     const indention = props.item.description.split(' ').slice(0,1).join('');
     const perviewDate = props.item.publishedAt.slice(0,10);
